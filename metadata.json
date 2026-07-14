@@ -1,0 +1,6 @@
+{
+  "name": "COCIC SARL",
+  "description": "Site vitrine ultra-premium de COCIC SARL, entreprise camerounaise de communication visuelle, signalétique, textile et impression numérique.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

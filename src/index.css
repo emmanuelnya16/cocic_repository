@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,400;1,600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand-blue: #005CAA;
+  --color-brand-red: #EE323A;
+  --color-brand-red-dark: #C42127;
+  --color-brand-navy: #0A2540;
+  --color-brand-offwhite: #F7F8FA;
+  --color-brand-ink: #1A1A1A;
+  --color-brand-grey: #6E6E6E;
+  --color-brand-paleblue: #E5EAF0;
+  --color-brand-darkblue: #032E4F;
+
+  --font-display: "Space Grotesk", sans-serif;
+  --font-archivo: "Archivo Black", sans-serif;
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+}
+
+/* Custom Signature Cut-corner Clip-Paths */
+.clip-top-left {
+  clip-path: polygon(24px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 24px);
+}
+
+.clip-bottom-right {
+  clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 24px), calc(100% - 24px) 100%, 0% 100%);
+}
+
+.clip-btn-cut {
+  clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0% 100%);
+}
+
+/* Diagonal Separator (8° to 12° Slope) */
+.diagonal-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Offset Printing/Registers stylized effect (mauvais calage) */
+.offset-register {
+  position: relative;
+}
+.offset-register::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: -4px;
+  bottom: -4px;
+  border: 2px solid var(--color-brand-red);
+  z-index: -1;
+  pointer-events: none;
+  transition: transform 0.3s ease;
+}
+.offset-register:hover::before {
+  transform: translate(-2px, -2px);
+}
+
+/* Duotone filter effect */
+.duotone-filter {
+  filter: grayscale(100%) contrast(120%) brightness(95%);
+  mix-blend-mode: multiply;
+  transition: filter 0.4s ease, mix-blend-mode 0.4s ease;
+}
+
+.duotone-container {
+  background-color: var(--color-brand-blue);
+  position: relative;
+  overflow: hidden;
+}
+
+.duotone-container::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-brand-red);
+  mix-blend-mode: screen;
+  opacity: 0.15;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.duotone-container:hover .duotone-filter {
+  filter: none;
+  mix-blend-mode: normal;
+}
+
+.duotone-container:hover::after {
+  opacity: 0;
+}
+
+/* Infinite Marquee Animation for client logos */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Halftone / Mesh screen-printing style pattern */
+.bg-halftone {
+  background-image: radial-gradient(rgba(0, 92, 170, 0.15) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+.bg-halftone-dark {
+  background-image: radial-gradient(rgba(238, 50, 58, 0.08) 1px, transparent 1px);
+  background-size: 12px 12px;
+}
+
+/* Custom Scrollbar for premium touch */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-brand-offwhite);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-brand-blue);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-red);
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-brand-red);
+  color: white;
+}
