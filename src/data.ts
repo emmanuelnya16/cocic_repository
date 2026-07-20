@@ -117,121 +117,457 @@ export const EQUIPEMENT_DATA: Equipment[] = [
 ];
 
 export const REALISATIONS_DATA: Realisation[] = [
-  // Signalétique
+  // ── SIGNALÉTIQUE ──────────────────────────────────────────────────────────
+
   {
     id: "r1",
-    titre: "Enseigne Lumineuse 3D & Façade Alucobond",
-    secteur: "Banques & Finance",
-    image: "https://images.unsplash.com/photo-1572945281744-424a55551925?auto=format&fit=crop&q=80&w=800",
+    titre: "Enseigne Lumineuse 3D — Siège Tradex",
+    secteur: "Énergie & Pétrole",
+    image: "/realisations/projet_tradex_4.PNG",
     pole: "signaletique",
     categorie: "Enseignes",
-    client: "Ecobank Cameroun",
-    annee: "2025",
-    description: "Habillage intégral de la façade de l'agence principale en Alucobond anthracite avec lettrage 3D rétroéclairé par LED étanches haute efficacité. Résistant aux intempéries équatoriales."
+    client: "Tradex S.A.",
+    annee: "2024",
+    description: "Fabrication et pose de l'enseigne monumentale lumineuse 3D en lettres découpées rétroéclairées sur la façade arrondie du siège social de Tradex à Douala. Structure en aluminium et acier inoxydable résistante aux intempéries."
   },
   {
     id: "r2",
-    titre: "Totem Directionnel & Signalétique Extérieure",
+    titre: "Station-Service Tradex — Habillage LED Éclairé (Edéa)",
     secteur: "Énergie & Pétrole",
-    image: "https://images.unsplash.com/photo-1569003339405-ea396a5a8a90?auto=format&fit=crop&q=80&w=800",
+    image: "/realisations/IMG-20260720-WA0046.jpg",
+    pole: "signaletique",
+    categorie: "Enseignes",
+    client: "Tradex S.A.",
+    annee: "2024",
+    description: "Habillage lumineux complet de la canopée de la station Tradex Edéa avec bandeau LED rouge haute intensité et enseigne principale rétroéclairée. Installation réalisée de nuit pour une mise en service immédiate."
+  },
+  {
+    id: "r3",
+    titre: "Totem Directionnel Prix Carburant — Tradex Nkolotou'Outou",
+    secteur: "Énergie & Pétrole",
+    image: "/realisations/IMG-20260720-WA0031.jpg",
     pole: "signaletique",
     categorie: "Totems",
     client: "Tradex S.A.",
     annee: "2024",
-    description: "Conception et fabrication de totems de station-service de 6 mètres de hauteur, intégrant des afficheurs de prix digitaux et une structure métallique certifiée anti-rafales."
-  },
-  {
-    id: "r3",
-    titre: "Signalétique Intérieure Directive et Directionnelle",
-    secteur: "Banques & Finance",
-    image: "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&q=80&w=800",
-    pole: "signaletique",
-    categorie: "Signalétique Intérieure",
-    client: "Société Générale Cameroun",
-    annee: "2024",
-    description: "Signalétique épurée en plexiglas dépoli et aluminium brossé pour les bureaux du siège social à Douala. Pictogrammes sur-mesure découpés au laser."
+    description: "Totem de station-service 6 mètres avec afficheur numérique des prix (Super, Gasoil, Pétrole, Gaz) sur structure métallique galvanisée. Conception et pose clé en main."
   },
   {
     id: "r4",
-    titre: "Habillage de Façade Corporate et Enseigne",
-    secteur: "Transport & Logistique",
-    image: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&q=80&w=800",
+    titre: "Totem Complet Tradex Magzi — Prix & Services",
+    secteur: "Énergie & Pétrole",
+    image: "/realisations/IMG-20260720-WA0044.jpg",
     pole: "signaletique",
-    categorie: "Enseignes",
-    client: "Bolloré Africa Logistics",
-    annee: "2023",
-    description: "Structures de signalétique monumentales et enseigne principale pour les entrepôts portuaires de Douala, alliant tôle pré-laquée et lettrage acier brossé."
+    categorie: "Totems",
+    client: "Tradex S.A.",
+    annee: "2024",
+    description: "Totem double corps avec panneau d'affichage des prix digitaux et modules de services (Trad'Shop, TradexLub, Maxiboost, ATM). Habillage Alucobond rouge et blanc avec signalétique directionnelle intégrée."
   },
-
-  // Textile
   {
     id: "r5",
-    titre: "Uniformes Corporate & Polos Brodés Premium",
-    secteur: "Agroalimentaire",
-    image: "https://images.unsplash.com/photo-1581655353564-df123a1eb820?auto=format&fit=crop&q=80&w=800",
-    pole: "textile",
-    categorie: "Uniformes Corporate",
-    client: "Nestlé Cameroun",
-    annee: "2025",
-    description: "Production de 1200 polos en coton piqué haut de gamme avec broderie relief 3D du logo pour la force de vente et les équipes d'animation."
+    titre: "Installation Totem Tradex Mballa 2 — Chantier",
+    secteur: "Énergie & Pétrole",
+    image: "/realisations/IMG-20260720-WA0045.jpg",
+    pole: "signaletique",
+    categorie: "Totems",
+    client: "Tradex S.A.",
+    annee: "2024",
+    description: "Chantier de pose du totem principal de la station Tradex Mballa 2 à Yaoundé. Câblage électrique du bandeau lumineux et installation des caissons rétroéclairés sous échafaudage certifié."
   },
   {
     id: "r6",
-    titre: "Équipements de Protection Individuelle (EPI) Marqués",
+    titre: "Signalétique Directionnelle Tradex — Panneau Bienvenue",
     secteur: "Énergie & Pétrole",
-    image: "https://images.unsplash.com/photo-1508849789987-4e5333c12b78?auto=format&fit=crop&q=80&w=800",
-    pole: "textile",
-    categorie: "Tenues Techniques",
-    client: "TotalEnergies Cameroun",
+    image: "/realisations/IMG-20260720-WA0032.jpg",
+    pole: "signaletique",
+    categorie: "Signalétique Intérieure",
+    client: "Tradex S.A.",
     annee: "2024",
-    description: "Confection de combinaisons ignifugées et gilets haute visibilité normés avec bandes rétro-réfléchissantes 3M et sérigraphie ignifuge."
+    description: "Panneau directionnel d'entrée de station avec pictogramme automobile et message « Bonne route — À bientôt chez Tradex ». Structure acier peint bicolore rouge et blanc."
   },
   {
     id: "r7",
-    titre: "Ligne de Vêtements d'Image & Merchandising",
-    secteur: "Autres",
-    image: "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&q=80&w=800",
-    pole: "textile",
-    categorie: "Merchandising",
-    client: "Brasseries du Cameroun",
-    annee: "2025",
-    description: "Développement et production de casquettes, t-shirts sérigraphiés et tabliers personnalisés pour les campagnes promotionnelles nationales."
+    titre: "Trad'Shop — Enseigne Lumineuse Façade & Bandeau LED",
+    secteur: "Énergie & Pétrole",
+    image: "/realisations/projet_tradex_5.PNG",
+    pole: "signaletique",
+    categorie: "Enseignes",
+    client: "Tradex / Trad'Shop",
+    annee: "2024",
+    description: "Enseigne Trad'Shop rétroéclairée LED en façade avec bandeau néon circulaire autour de la canopée. Réalisation nocturne photographiée lors de la réception des travaux à la station Tradex Edéa."
   },
-
-  // Impression
   {
     id: "r8",
-    titre: "Campagne d'Affichage Urbain & Roll-ups",
-    secteur: "Institutionnel & ONG",
-    image: "https://images.unsplash.com/photo-1540959733332-eab4deceeaf7?auto=format&fit=crop&q=80&w=800",
-    pole: "impression",
-    categorie: "Impression Grand Format",
-    client: "UNICEF Cameroun",
-    annee: "2025",
-    description: "Impression numérique haute définition sur bâches frontlit 550g avec œillets renforcés pour la campagne de sensibilisation nationale."
+    titre: "Trad'Shop — Construction & Habillage Façade",
+    secteur: "Énergie & Pétrole",
+    image: "/realisations/projet_tradex_7.PNG",
+    pole: "signaletique",
+    categorie: "Enseignes",
+    client: "Tradex / Trad'Shop",
+    annee: "2023",
+    description: "Habillage complet façade Alucobond gris et rouge de la boutique Trad'Shop avec enseigne principale. Vue de chantier avant réception des travaux."
   },
   {
     id: "r9",
-    titre: "Habillage Flotte de Véhicules (Car Wrapping)",
-    secteur: "Transport & Logistique",
-    image: "https://images.unsplash.com/photo-1508974239320-0a029497e820?auto=format&fit=crop&q=80&w=800",
-    pole: "impression",
-    categorie: "Arts Graphiques",
-    client: "DHL Cameroun",
+    titre: "Enseigne Lumineuse Tradex — Siège Douala Vue Nuit",
+    secteur: "Énergie & Pétrole",
+    image: "/realisations/IMG-20260720-WA0020.jpg",
+    pole: "signaletique",
+    categorie: "Enseignes",
+    client: "Tradex S.A.",
     annee: "2024",
-    description: "Semi-covering de 15 véhicules utilitaires de livraison. Utilisation de vinyle polymère coulé 3M avec lamination brillante anti-UV pour préserver les couleurs éclatantes sous le soleil africain."
+    description: "Vue nocturne de l'enseigne lumineuse principale du siège Tradex à Douala, lettres 3D rétroéclairées positionnées en hauteur sur la façade arrondie. Rendu spectaculaire validé à la réception."
   },
   {
     id: "r10",
-    titre: "Décoration de Stand d'Exposition Événementiel",
+    titre: "Enseigne Ecobank — Lettres 3D Façade (Yaoundé)",
     secteur: "Banques & Finance",
-    image: "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?auto=format&fit=crop&q=80&w=800",
+    image: "/realisations/IMG-20260720-WA0021.jpg",
+    pole: "signaletique",
+    categorie: "Enseignes",
+    client: "Ecobank Cameroun",
+    annee: "2025",
+    description: "Fabrication et pose des lettres volumiques 3D « Ecobank — The Pan African Bank » sur fond Alucobond bleu en façade d'agence. Finition brillante anti-UV adaptée au climat équatorial."
+  },
+  {
+    id: "r11",
+    titre: "Guichet Automatique Ecobank — Caisson Lumineux ATM",
+    secteur: "Banques & Finance",
+    image: "/realisations/IMG-20260720-WA0034.jpg",
+    pole: "signaletique",
+    categorie: "Signalétique Intérieure",
+    client: "Ecobank Cameroun",
+    annee: "2025",
+    description: "Habillage des cabines GAB (Guichet Automatique Bancaire) Ecobank avec caissons lumineux bleus intégrés, signalétique VISA/Mastercard et branding complet des DAB."
+  },
+  {
+    id: "r12",
+    titre: "Cabine ATM Ecobank — Pose Caisson & Signalétique",
+    secteur: "Banques & Finance",
+    image: "/realisations/IMG-20260720-WA0047.jpg",
+    pole: "signaletique",
+    categorie: "Enseignes",
+    client: "Ecobank Cameroun",
+    annee: "2025",
+    description: "Intervention de pose du caisson lumineux bleu de la cabine ATM Ecobank. Habillage complet avec signalétique de retrait et dépôt. Chantier réalisé avec EPI certifiés."
+  },
+  {
+    id: "r13",
+    titre: "Enseigne Lumineuse Ecobank — Bandeau Entrée Agence",
+    secteur: "Banques & Finance",
+    image: "/realisations/IMG-20260720-WA0051.jpg",
+    pole: "signaletique",
+    categorie: "Enseignes",
+    client: "Ecobank Cameroun",
+    annee: "2025",
+    description: "Enseigne lumineuse néon LED en bandeau sur portique d'entrée d'agence Ecobank — vue nocturne. Lettrage rétroéclairé blanc sur fond bleu roi, résistant aux intempéries."
+  },
+  {
+    id: "r14",
+    titre: "Totem Ecobank Ngaoundéré — Agence & Services",
+    secteur: "Banques & Finance",
+    image: "/realisations/IMG-20260720-WA0052.jpg",
+    pole: "signaletique",
+    categorie: "Totems",
+    client: "Ecobank Cameroun",
+    annee: "2024",
+    description: "Totem bleu complet de l'agence Ecobank Ngaoundéré avec horaires, services GAB 24h/24, RapidTransfer, MoneyGram et Bureau de Change. Structure aluminium avec impression numérique UV durable."
+  },
+  {
+    id: "r15",
+    titre: "Façade Agence Ecobank Ngaoundéré — Vue Nocturne",
+    secteur: "Banques & Finance",
+    image: "/realisations/IMG-20260720-WA0053.jpg",
+    pole: "signaletique",
+    categorie: "Enseignes",
+    client: "Ecobank Cameroun",
+    annee: "2024",
+    description: "Vue nocturne complète de l'agence Ecobank Ngaoundéré après installation des enseignes lumineuses COCIC : façade rétroéclairée, totem et signalétique extérieure."
+  },
+  {
+    id: "r16",
+    titre: "Station OLA Energy — Habillage Canopée Alucobond",
+    secteur: "Énergie & Pétrole",
+    image: "/realisations/IMG-20260720-WA0026.jpg",
+    pole: "signaletique",
+    categorie: "Enseignes",
+    client: "OLA Energy",
+    annee: "2024",
+    description: "Pose des panneaux Alucobond bleu et blanc sur la canopée de la station OLA Energy. Chantier en hauteur sous échafaudage, avec techniciens EPI COCIC. Branding OLA complet."
+  },
+  {
+    id: "r17",
+    titre: "Totem Station Gulfin — Caisson Prix & Enseigne",
+    secteur: "Énergie & Pétrole",
+    image: "/realisations/IMG-20260720-WA0023.jpg",
+    pole: "signaletique",
+    categorie: "Totems",
+    client: "Gulfin Cameroun",
+    annee: "2023",
+    description: "Totem complet de station-service Gulfin avec caisson de prix lumineux et enseigne principale. Construction métallique galvanisée avec habillage Alucobond jaune et blanc."
+  },
+  {
+    id: "r18",
+    titre: "Coffret Distributeur Gulfin — Pétrole & Signalétique",
+    secteur: "Énergie & Pétrole",
+    image: "/realisations/IMG-20260720-WA0027.jpg",
+    pole: "signaletique",
+    categorie: "Signalétique Intérieure",
+    client: "Gulfin Cameroun",
+    annee: "2023",
+    description: "Habillage du coffret distributeur Gulfin avec signalétique Pétrole en grand format. Caisson double face aluminium et impression UV grand format fond jaune et blanc."
+  },
+  {
+    id: "r19",
+    titre: "Enseigne Fabrication — Atelier COCIC (Lettrage Acier)",
+    secteur: "Autres",
+    image: "/realisations/IMG-20260720-WA0025.jpg",
+    pole: "signaletique",
+    categorie: "Enseignes",
+    client: "COCIC SARL — Production interne",
+    annee: "2024",
+    description: "Technicien COCIC en EPI haute visibilité effectuant la finition au pistolet de peinture sur un panneau de lettrage grand format en atelier. Illustration du savoir-faire technique de fabrication."
+  },
+  {
+    id: "r20",
+    titre: "Habillage Réfrigérateur Boissons du Cameroun",
+    secteur: "Agroalimentaire",
+    image: "/realisations/IMG-20260720-WA0019.jpg",
+    pole: "signaletique",
+    categorie: "Signalétique Intérieure",
+    client: "Boissons du Cameroun",
+    annee: "2023",
+    description: "Habillage complet d'un réfrigérateur mobile Boissons du Cameroun en vinyle impression numérique UV jaune et orange. Caisson aluminium sur roulettes pour points de vente."
+  },
+  {
+    id: "r21",
+    titre: "Tour Alucobond Bicolore — Station Énergie (Vue Dusk)",
+    secteur: "Énergie & Pétrole",
+    image: "/realisations/IMG-20260720-WA0043.jpg",
+    pole: "signaletique",
+    categorie: "Enseignes",
+    client: "Client énergie — Douala",
+    annee: "2024",
+    description: "Tour de station-service en Alucobond bicolore gris et blanc avec bandeau LED rouge panoramique. Installation à Douala lors d'un chantier nocturne de mise en lumière."
+  },
+
+  // ── TEXTILE & CONFECTION ─────────────────────────────────────────────────
+
+  {
+    id: "r22",
+    titre: "Chemise Corporate Boissons du Cameroun — Collection Homme",
+    secteur: "Agroalimentaire",
+    image: "/realisations/textile_1.jpg",
+    pole: "textile",
+    categorie: "Uniformes Corporate",
+    client: "Boissons du Cameroun",
+    annee: "2025",
+    description: "Confection de chemise corporate homme Boissons du Cameroun en tissu chiné tricolore (jaune, gris, blanc) avec badge brodé. Coupe ajustée sur-mesure, finitions biais blancs et bandes réfléchissantes."
+  },
+  {
+    id: "r23",
+    titre: "Polo Long Manches Boissons du Cameroun — Collection Homme",
+    secteur: "Agroalimentaire",
+    image: "/realisations/textile_2.jpg",
+    pole: "textile",
+    categorie: "Uniformes Corporate",
+    client: "Boissons du Cameroun",
+    annee: "2025",
+    description: "Polo manches longues corporate Boissons du Cameroun bicolore jaune/marine avec appliqué logo intégré. Conception et production d'une ligne homogène pour la force de vente terrain."
+  },
+  {
+    id: "r24",
+    titre: "Robe Uniforme Dame Boissons du Cameroun — Collection Femme",
+    secteur: "Agroalimentaire",
+    image: "/realisations/textile_3.jpg",
+    pole: "textile",
+    categorie: "Uniformes Corporate",
+    client: "Boissons du Cameroun",
+    annee: "2025",
+    description: "Robe uniforme corporate femme rouge et gris perle avec col officier, badge brodé et manches évasées en georgette. Collection hôtesses et accueil pour les événements corporatifs Boissons du Cameroun."
+  },
+  {
+    id: "r25",
+    titre: "Chemise Corporate Boissons du Cameroun — Gris-Blanc (Homme)",
+    secteur: "Agroalimentaire",
+    image: "/realisations/IMG-20260720-WA0038.jpg",
+    pole: "textile",
+    categorie: "Uniformes Corporate",
+    client: "Boissons du Cameroun",
+    annee: "2025",
+    description: "Chemise corporate homme Boissons du Cameroun gris chiné/blanc avec rayure jaune centrale et badge brodé. Modèle manches longues pour managers et commerciaux terrain."
+  },
+  {
+    id: "r26",
+    titre: "Tablier Corporate Trad'Shop — Tenue Hôtesse",
+    secteur: "Énergie & Pétrole",
+    image: "/realisations/IMG-20260720-WA0042.jpg",
+    pole: "textile",
+    categorie: "Uniformes Corporate",
+    client: "Tradex / Trad'Shop",
+    annee: "2024",
+    description: "Tablier rouge corporate Trad'Shop avec poche avant grise et broderie logo. Confectionné pour les hôtesses et vendeurs des boutiques Trad'Shop dans les stations Tradex."
+  },
+  {
+    id: "r27",
+    titre: "Sac Banane Brodé Orange Digital Centre",
+    secteur: "Autres",
+    image: "/realisations/IMG-20260720-WA0041.jpg",
+    pole: "textile",
+    categorie: "Merchandising",
+    client: "Orange Digital Centre",
+    annee: "2024",
+    description: "Confection de sacs banane en toile noire avec broderie « Orange Digital Centre » en orange. Production réalisée sur brodeuse industrielle Tajima multi-têtes pour les participants aux formations."
+  },
+
+  // ── IMPRESSION & ARTS GRAPHIQUES ─────────────────────────────────────────
+
+  {
+    id: "r28",
+    titre: "Packaging Sac Farine Bijou Agege Best — 50kg",
+    secteur: "Agroalimentaire",
+    image: "/realisations/IMG-20260720-WA0018.jpg",
+    pole: "impression",
+    categorie: "Arts Graphiques",
+    client: "Bijou / Agege Best",
+    annee: "2024",
+    description: "Conception graphique et impression numérique du packaging grand sac de farine Bijou Agege Best 50 kg. Rendu chromatic premium en bleu/or sur fond sombre, surimpression brillante sur polypropylène tissé."
+  },
+  {
+    id: "r29",
+    titre: "Totem Promotionnel Castel Beer — Bouteille Gonflable 4m",
+    secteur: "Agroalimentaire",
+    image: "/realisations/IMG-20260720-WA0029.jpg",
     pole: "impression",
     categorie: "Événementiel",
-    client: "UBA Cameroun",
-    annee: "2025",
-    description: "Aménagement graphique complet du pavillon UBA au salon international de l'entreprise PROMOTE : backdrops en tissu tendu rétroéclairé et comptoirs d'accueil personnalisés."
-  }
+    client: "Boissons du Cameroun / Castel Beer",
+    annee: "2024",
+    description: "Fabrication d'une réplique gonflable géante de la bouteille Castel Beer en PVC haute résistance — 4 mètres de hauteur. Impression numérique UV grand format fidèle au design de l'étiquette officielle."
+  },
+  {
+    id: "r30",
+    titre: "Bouteille Gonflable 33 Export — Événementiel Football",
+    secteur: "Agroalimentaire",
+    image: "/realisations/IMG-20260720-WA0030.jpg",
+    pole: "impression",
+    categorie: "Événementiel",
+    client: "Boissons du Cameroun / 33 Export",
+    annee: "2024",
+    description: "Réplique gonflable géante 33 Export Bière en PVC imprimée numériquement. Confectionnée pour les animations et campagnes de visibilité lors des matchs de football. Dimension : 4,5 mètres."
+  },
+  {
+    id: "r31",
+    titre: "Arche Gonflable Source Tangui — Événement 14×7m",
+    secteur: "Agroalimentaire",
+    image: "/realisations/IMG-20260720-WA0028.jpg",
+    pole: "impression",
+    categorie: "Événementiel",
+    client: "Source Tangui",
+    annee: "2024",
+    description: "Conception et fabrication d'une arche gonflable Source Tangui de 14 mètres de largeur et 7 mètres de hauteur. Structure PVC bleu/rouge avec impression numérique intégrale. Parfaite pour courses et événements sportifs."
+  },
+  {
+    id: "r32",
+    titre: "Panneau Publicitaire 33 Export — Affichage Bar",
+    secteur: "Agroalimentaire",
+    image: "/realisations/projet_signaletique_9.PNG",
+    pole: "impression",
+    categorie: "Impression Grand Format",
+    client: "Boissons du Cameroun / 33 Export",
+    annee: "2024",
+    description: "Impression numérique grand format bâche frontlit 33 Export avec habillage bar et bandeau promotionnel « Le Sucre de la CAN ». Pose complète sur structure en extérieur."
+  },
+  {
+    id: "r33",
+    titre: "Bandeau Publicitaire 33 Export — Le Sucre de la CAN",
+    secteur: "Agroalimentaire",
+    image: "/realisations/IMG-20260720-WA0054.jpg",
+    pole: "impression",
+    categorie: "Impression Grand Format",
+    client: "Boissons du Cameroun / 33 Export",
+    annee: "2024",
+    description: "Bandeau publicitaire en drapeau triangulaire 33 Export avec message « Chez 2 Le Sucre de la CAN ». Impression numérique sur bâche couplée à un panneau billboard. Pose sur mât acier."
+  },
+  {
+    id: "r34",
+    titre: "Bandeau Bâche TOP Boissons — Façade Bar Promotionnel",
+    secteur: "Agroalimentaire",
+    image: "/realisations/IMG-20260720-WA0049.jpg",
+    pole: "impression",
+    categorie: "Impression Grand Format",
+    client: "Boissons du Cameroun / TOP",
+    annee: "2024",
+    description: "Bâches frontlit grand format « Un TOP sourire à la vie » avec visuels bouteilles en pied de façade de bar. Impression numérique haute définition installée à Douala."
+  },
+  {
+    id: "r35",
+    titre: "Panneau Caisson Trad'Shop — Affichage Extérieur",
+    secteur: "Énergie & Pétrole",
+    image: "/realisations/IMG-20260720-WA0040.jpg",
+    pole: "impression",
+    categorie: "Impression Grand Format",
+    client: "Tradex / Trad'Shop",
+    annee: "2024",
+    description: "Panneau double face imprimé en caisson Trad'Shop « Visitez nos Trad'Shops » avec visuel photographique grand format. Structure aluminium slim-frame posée sur pelouse."
+  },
+  {
+    id: "r36",
+    titre: "Billboard Trad'Shop — Cadre Mural Exterior 24h/24",
+    secteur: "Énergie & Pétrole",
+    image: "/realisations/IMG-20260720-WA0050.jpg",
+    pole: "impression",
+    categorie: "Impression Grand Format",
+    client: "Tradex / Trad'Shop",
+    annee: "2024",
+    description: "Panneau mural imprimé grand format Trad'Shop « Ouvertes 24h/24 » sur cadre métallique intégré dans une structure décorative circulaire. Impression numérique photo qualité extérieur."
+  },
+  {
+    id: "r37",
+    titre: "Habillage Comptoir Bar 33 Export — Vinyle Adhésif",
+    secteur: "Agroalimentaire",
+    image: "/realisations/projet_signaletique_10.PNG",
+    pole: "impression",
+    categorie: "Arts Graphiques",
+    client: "Boissons du Cameroun / 33 Export",
+    annee: "2023",
+    description: "Habillage du comptoir d'un bar partenaire avec vinyle adhésif rouge 33 Export et logo blanc en relief. Application sur surface bois laquée, finition vernis brillant UV."
+  },
+  {
+    id: "r38",
+    titre: "Conception Stand Total Quartz — Contenant Promotionnel 3D",
+    secteur: "Énergie & Pétrole",
+    image: "/realisations/IMG-20260720-WA0022.jpg",
+    pole: "impression",
+    categorie: "Événementiel",
+    client: "Total Quartz Cameroun",
+    annee: "2023",
+    description: "Rendu 3D conception d'un stand promotionnel container Total Quartz Chez Essomba avec vitrine d'exposition huiles moteur. Design architectural et visual merchandising intégré."
+  },
+  {
+    id: "r39",
+    titre: "Terrain de Basketball Marqué — YouZou (Vue Aérienne)",
+    secteur: "Autres",
+    image: "/realisations/IMG-20260720-WA0048.jpg",
+    pole: "impression",
+    categorie: "Arts Graphiques",
+    client: "YouZou — Yaoundé",
+    annee: "2024",
+    description: "Marquage complet d'un terrain de basketball aux couleurs YouZou — vert, blanc et logo central — réalisé par application de peinture spéciale sol extérieur résistante aux UV et aux intempéries."
+  },
+
+  // ── WRAPPING & HABILLAGE VÉHICULES ───────────────────────────────────────
+
+  {
+    id: "r40",
+    titre: "Car Wrapping OLA Lab — Van Mercedes Sprinter",
+    secteur: "Énergie & Pétrole",
+    image: "/realisations/IMG-20260720-WA0024.jpg",
+    pole: "impression",
+    categorie: "Arts Graphiques",
+    client: "OLA Energy",
+    annee: "2024",
+    description: "Semi-covering complet du van Mercedes Sprinter OLA Lab (laboratoire mobile de contrôle qualité) aux couleurs OLA Energy bleu, blanc et orange. Vinyle polymère coulé 3M avec lamination anti-UV pour une durée de vie de 5 ans sous soleil africain."
+  },
 ];
 
 export const REFERENCES_DATA: ClientReference[] = [

@@ -11,7 +11,9 @@ import { PageTransition } from "../components/PageTransition";
 import { Button } from "../components/Button";
 import { SectionTitle } from "../components/SectionTitle";
 import { AnimatedCounter } from "../components/AnimatedCounter";
+import { PartnerLogosMarquee } from "../components/PartnerLogosMarquee";
 import { REFERENCES_DATA } from "../data";
+
 
 export const Accueil: React.FC = () => {
   // Highlighted references to loop inside the marquee
@@ -24,7 +26,7 @@ export const Accueil: React.FC = () => {
       num: "01",
       title: "Signalétique & Enseignes",
       desc: "Enseignes lumineuses 3D, totems directionnels monumentaux, habillages de façades en Alucobond et signalétique directionnelle intérieure/extérieure intégrée.",
-      image: "https://images.unsplash.com/photo-1572945281744-424a55551925?auto=format&fit=crop&q=80&w=600",
+      image: "/realisations/projet_tradex_4.PNG",
       link: "/services?pole=signaletique",
       clipClass: "clip-top-left"
     },
@@ -33,7 +35,7 @@ export const Accueil: React.FC = () => {
       num: "02",
       title: "Textile & Confection",
       desc: "Lignes d'uniformes corporate haut de gamme, tenues industrielles techniques (EPI normés), casquettes et merchandising d'image brodés ou sérigraphiés.",
-      image: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=600",
+      image: "/realisations/textile_1.jpg",
       link: "/services?pole=textile",
       clipClass: "clip-bottom-right"
     },
@@ -42,7 +44,7 @@ export const Accueil: React.FC = () => {
       num: "03",
       title: "Impression & Arts Graphiques",
       desc: "Impression numérique UV à plat grand format sur rigides, habillages de flottes de véhicules (wrapping 3M), affichages urbains de haute durabilité.",
-      image: "https://images.unsplash.com/photo-1596708147259-db4398734e9f?auto=format&fit=crop&q=80&w=600",
+      image: "/realisations/IMG-20260720-WA0024.jpg",
       link: "/services?pole=impression",
       clipClass: "clip-top-left"
     }
@@ -172,21 +174,21 @@ export const Accueil: React.FC = () => {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative w-full aspect-[4/5] bg-brand-darkblue/80 clip-top-left offset-register border border-white/10 flex items-center justify-center overflow-hidden"
+              className="relative w-full aspect-[4/5] bg-white clip-top-left offset-register border border-brand-paleblue/60 flex items-center justify-center overflow-hidden shadow-xl"
             >
-              {/* Subtle background glow */}
-              <div className="absolute inset-0 bg-gradient-to-br from-brand-blue/30 via-brand-navy/60 to-brand-navy pointer-events-none" />
-              <div className="absolute -top-20 -right-20 w-64 h-64 bg-brand-red/10 rounded-full blur-3xl pointer-events-none" />
+              {/* Subtle light background accent */}
+              <div className="absolute inset-0 bg-gradient-to-br from-white via-brand-offwhite to-brand-paleblue/20 pointer-events-none" />
+              <div className="absolute -top-20 -right-20 w-64 h-64 bg-brand-red/5 rounded-full blur-3xl pointer-events-none" />
 
               {/* COCIC Logo — centré et mise en valeur */}
               <div className="relative z-10 flex flex-col items-center justify-center gap-6 p-10">
                 <img
                   src="/cocic.webp"
                   alt="COCIC SARL — Atelier Intégré Douala"
-                  className="w-full max-w-[220px] object-contain drop-shadow-[0_8px_24px_rgba(0,0,0,0.6)]"
+                  className="w-full max-w-[220px] object-contain drop-shadow-[0_4px_16px_rgba(0,92,170,0.15)]"
                 />
-                <div className="w-12 h-[2px] bg-brand-red/60 mx-auto" />
-                <span className="font-display font-bold text-[10px] uppercase tracking-[0.2em] text-brand-paleblue/70 text-center">
+                <div className="w-12 h-[2px] bg-brand-red mx-auto" />
+                <span className="font-display font-bold text-[10px] uppercase tracking-[0.2em] text-brand-grey text-center">
                   Excellence Industrielle · Douala
                 </span>
               </div>
@@ -229,7 +231,7 @@ export const Accueil: React.FC = () => {
                     src={pole.image}
                     alt={pole.title}
                     loading="lazy"
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 filter brightness-90 grayscale group-hover:grayscale-0"
+                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 brightness-90 group-hover:brightness-100"
                   />
                   {/* Category numeric indicator */}
                   <span className="absolute top-4 left-4 font-archivo text-2xl text-white/50 group-hover:text-brand-red transition-colors">
@@ -339,9 +341,9 @@ export const Accueil: React.FC = () => {
         </div>
       </section>
 
-      {/* 4. CLIENT LOGO HORIZONTAL INFINITE SCROLL */}
+      {/* 4. CLIENT LOGO HORIZONTAL INFINITE SCROLL — 3 rows with real partner logos */}
       <section id="logos-section" className="py-16 bg-white border-y border-brand-paleblue overflow-hidden">
-        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-4">
           <div>
             <span className="font-sans text-[10px] uppercase tracking-widest text-brand-red font-bold block mb-1">
               03 — Confiance
@@ -360,39 +362,10 @@ export const Accueil: React.FC = () => {
           </Link>
         </div>
 
-        {/* Marquee Wrapper */}
-        <div className="relative w-full flex items-center py-4 bg-brand-offwhite/50">
-          <div className="flex overflow-hidden select-none w-full relative">
-            
-            {/* Infinite Marquee Loop (Repeated to guarantee seamless gapless scroll) */}
-            <div className="animate-marquee flex gap-12 items-center">
-              {marqueeClients.concat(marqueeClients).map((client, idx) => (
-                <div
-                  key={`${client.id}-${idx}`}
-                  id={`marquee-client-${client.id}-${idx}`}
-                  className="mx-6 shrink-0 flex items-center justify-center opacity-90 hover:opacity-100 transition-all duration-300"
-                >
-                  {/* Styled fallback typography logo representation mimicking real brand logos */}
-                  <div className="bg-white border border-brand-paleblue/50 px-6 py-4 shadow-sm flex items-center gap-4 font-display font-bold text-sm text-brand-blue tracking-tight clip-btn-cut min-w-[210px] h-20 justify-center cursor-pointer hover:shadow-md transition-all duration-300">
-                    {client.logoUrl ? (
-                      <img
-                        src={client.logoUrl}
-                        alt={`${client.nom} logo`}
-                        referrerPolicy="no-referrer"
-                        className="h-10 sm:h-12 w-auto max-w-[120px] object-contain shrink-0 transition-transform duration-300 hover:scale-105"
-                      />
-                    ) : (
-                      <span className="w-2.5 h-2.5 bg-brand-red rounded-full shrink-0" />
-                    )}
-                    <span className="uppercase text-brand-blue font-archivo font-black text-xs sm:text-sm tracking-wider">{client.nom}</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-          </div>
-        </div>
+        {/* 3-row partner logos marquee */}
+        <PartnerLogosMarquee bgClass="bg-white" />
       </section>
+
 
       {/* 5. CATA CITATION & GRAND CTA SECTION */}
       <section id="cta-section" className="py-24 bg-brand-navy text-white relative">

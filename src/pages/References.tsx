@@ -11,7 +11,9 @@ import { PageTransition } from "../components/PageTransition";
 import { SectionTitle } from "../components/SectionTitle";
 import { FilterPills } from "../components/FilterPills";
 import { Button } from "../components/Button";
+import { PartnerLogosMarquee } from "../components/PartnerLogosMarquee";
 import { REFERENCES_DATA, TESTIMONIALS_DATA } from "../data";
+
 
 export const References: React.FC = () => {
   const [activeSector, setActiveSector] = useState<string>("all");
@@ -103,6 +105,30 @@ export const References: React.FC = () => {
         </div>
       </section>
 
+      {/* PARTNER LOGOS MARQUEE — 3 rows infinite scroll */}
+      <section id="partners-logos-marquee" className="py-16 bg-brand-offwhite border-b border-brand-paleblue overflow-hidden">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <span className="font-sans text-[10px] uppercase tracking-widest text-brand-red font-bold block mb-2">
+              01 — Nos Partenaires
+            </span>
+            <h2 className="font-archivo text-3xl md:text-4xl uppercase text-brand-blue font-black tracking-tight">
+              Ils nous font <span className="text-brand-red">confiance</span>
+            </h2>
+            <p className="font-sans text-sm text-brand-grey mt-3 max-w-xl mx-auto leading-relaxed">
+              Plus de 30 entreprises leaders, institutions et marques internationales nous accordent leur confiance à travers l'Afrique subsaharienne.
+            </p>
+          </motion.div>
+        </div>
+
+        <PartnerLogosMarquee bgClass="bg-brand-offwhite" />
+      </section>
+
       {/* REFS LOGO GALLERY (FILTERABLE SECTOR GRIDS) */}
       <section id="references-gallery" className="py-20 bg-white">
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -111,6 +137,7 @@ export const References: React.FC = () => {
             <span className="font-sans text-[10px] uppercase tracking-widest text-brand-grey font-bold block mb-3">
               Filtrer par secteur d'activité :
             </span>
+
             <FilterPills
               options={sectors}
               activeId={activeSector}
