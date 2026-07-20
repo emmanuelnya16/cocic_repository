@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Sparkles, ShieldCheck, Cpu, ArrowUpRight } from "lucide-react";
 import { motion } from "motion/react";
@@ -18,6 +18,25 @@ import { REFERENCES_DATA } from "../data";
 export const Accueil: React.FC = () => {
   // Highlighted references to loop inside the marquee
   const marqueeClients = REFERENCES_DATA;
+
+  // Hero background slideshow — smooth crossfade, no black flash
+  const heroSlides = [
+    "/slides/IMG-20260720-WA0026.jpg",
+    "/realisations/IMG-20260720-WA0046.jpg",
+    "/realisations/projet_tradex_4.PNG",
+    "/slides/IMG-20260720-WA0025.jpg",
+    "/realisations/IMG-20260720-WA0053.jpg",
+    "/realisations/IMG-20260720-WA0048.jpg",
+  ];
+  const [activeIdx, setActiveIdx] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveIdx(prev => (prev + 1) % heroSlides.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // 3 poles cards
   const poles = [
@@ -52,27 +71,44 @@ export const Accueil: React.FC = () => {
 
   return (
     <PageTransition>
-      {/* 1. HERO SECTION WITH DIAGONAL GRADIENT & PARALLAX OFFSET */}
+      {/* 1. HERO SECTION — BACKGROUND SLIDESHOW + DESIGN UNCHANGED */}
       <section
         id="hero-section"
         className="relative min-h-screen pt-28 pb-20 flex items-center bg-brand-navy overflow-hidden"
-        style={{
-          backgroundImage: `url("https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1600")`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
       >
-        {/* Elegant background overlays for supreme legibility & luxury ambiance */}
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-navy/95 via-brand-navy/80 to-brand-navy/45 pointer-events-none" />
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/90 via-transparent to-brand-navy/30 pointer-events-none" />
-        <div className="absolute inset-0 backdrop-blur-[4px] pointer-events-none" />
+        {/* ── BACKGROUND SLIDESHOW — CROSSFADE ── */}
+        <div className="absolute inset-0 overflow-hidden">
+          {heroSlides.map((src, idx) => (
+            <div
+              key={src}
+              className="absolute inset-0 bg-cover bg-center"
+              style={{
+                backgroundImage: `url("${src}")`,
+                opacity: idx === activeIdx ? 1 : 0,
+                transition: "opacity 1.4s ease-in-out",
+                zIndex: idx === activeIdx ? 1 : 0,
+                willChange: "opacity",
+              }}
+            />
+          ))}
+        </div>
 
-        {/* Abstract background elements (trame / halftone) */}
-        <div className="absolute inset-0 bg-halftone opacity-15 pointer-events-none" />
-        <div className="absolute -top-40 -right-40 w-96 h-96 bg-brand-red opacity-15 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-brand-blue opacity-25 rounded-full blur-3xl pointer-events-none" />
+        {/* ── OVERLAYS — toujours au-dessus du slideshow (z-10) ── */}
+        {/* Dégradé gauche-droite navy : garantit la lisibilité du texte côté gauche */}
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-navy/95 via-brand-navy/75 to-brand-navy/40 pointer-events-none" style={{ zIndex: 10 }} />
+        {/* Dégradé bas-haut : assombrit le bas et le haut */}
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/90 via-transparent to-brand-navy/40 pointer-events-none" style={{ zIndex: 11 }} />
+        {/* Blur permanent sur toute la surface */}
+        <div className="absolute inset-0 backdrop-blur-[5px] pointer-events-none" style={{ zIndex: 12 }} />
+        {/* Teinte navy supplémentaire pour garantir la lisibilité */}
+        <div className="absolute inset-0 bg-brand-navy/30 pointer-events-none" style={{ zIndex: 13 }} />
 
-        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        {/* Éléments décoratifs abstraits */}
+        <div className="absolute inset-0 bg-halftone opacity-10 pointer-events-none" style={{ zIndex: 14 }} />
+        <div className="absolute -top-40 -right-40 w-96 h-96 bg-brand-red opacity-15 rounded-full blur-3xl pointer-events-none" style={{ zIndex: 14 }} />
+        <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-brand-blue opacity-20 rounded-full blur-3xl pointer-events-none" style={{ zIndex: 14 }} />
+
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
           {/* Hero Left Content - Sits directly on the background with beautiful, highly legible floating layout */}
           <motion.div
@@ -200,6 +236,23 @@ export const Accueil: React.FC = () => {
             </motion.div>
           </div>
 
+        </div>
+
+        {/* ── SLIDE INDICATORS ── */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+          {heroSlides.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => setActiveIdx(idx)}
+              aria-label={`Slide ${idx + 1}`}
+              className="rounded-full transition-all duration-500"
+              style={{
+                width: idx === activeIdx ? "28px" : "8px",
+                height: "8px",
+                background: idx === activeIdx ? "#E30613" : "rgba(255,255,255,0.4)",
+              }}
+            />
+          ))}
         </div>
       </section>
 
